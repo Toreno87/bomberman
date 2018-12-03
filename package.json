@@ -1,0 +1,20 @@
+{
+  "name": "bomberman",
+  "version": "1.0.0",
+  "description": "game bomberman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "author": "MWC Team",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
