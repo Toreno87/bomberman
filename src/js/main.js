@@ -1,5 +1,1 @@
-(function() {
-  const canvas = document.getElementById("game");
-  var game = canvas.getContext("2d");
-
-})();
+import {canv, ctx} from './data/const';
