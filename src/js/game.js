@@ -1,7 +1,10 @@
 class Game {
-  constructor() {
+  constructor(canvas, canvasBg) {
     this.time = 100500;
     this.isPaused = false;
+
+    this.canvas = canvas;
+    this.canvasBg = canvasBg;
   }
 
   play() {
