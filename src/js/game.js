@@ -1,18 +1,25 @@
+import State from './state';
+import Canvas from './canvas';
+import Logic from './logic';
+import Draw from './draw';
+import Render from './render';
+
 class Game {
-  constructor(canvas, canvasBg) {
-    this.time = 100500;
-    this.isPaused = false;
+  constructor() {
+    this.state = new State();
 
-    this.canvas = canvas;
-    this.canvasBg = canvasBg;
+    let gameWrapper = document.getElementById('game_wrapper');
+    this.canvasBg = new Canvas(gameWrapper, 1);
+    this.canvas = new Canvas(gameWrapper, 2);
+    this.logic = new Logic(this);
+    this.draw = new Draw(this);
+    this.render = new Render(this);
+
+    this.init();
   }
 
-  play() {
-    this.isPaused = false;
-  }
-
-  pause() {
-    this.isPaused = true;
+  init() {
+    this.render.start();
   }
 }
 

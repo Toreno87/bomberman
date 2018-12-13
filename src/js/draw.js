@@ -1,19 +1,12 @@
+import time from './time';
+
 class Draw {
   constructor(game) {
     this.game = game;
+    this.time = time;
 
-    this.drawOnCanvasBg();
-    this.drawOnCanvas();
-  }
+    this.a = 1;
 
-  drawRect(ctx, x, y, width, height, color) {
-    ctx.beginPath();
-    ctx.fillStyle = color;
-    ctx.fillRect(x, y, width, height);
-    ctx.closePath();
-  }
-
-  drawOnCanvasBg() {
     this.drawRect(
       this.game.canvasBg.ctx,
       0,
@@ -24,10 +17,22 @@ class Draw {
     );
   }
 
-  drawOnCanvas() {
+  drawRect(ctx, x, y, width, height, color) {
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, width, height);
+    ctx.closePath();
+  }
+
+  clearCanvas(canvas) {
+    canvas.ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  refresh() {
+    this.clearCanvas(this.game.canvas);
     this.drawRect(
       this.game.canvas.ctx,
-      0,
+      this.a += (20 * this.time.dt),
       0,
       64,
       64,

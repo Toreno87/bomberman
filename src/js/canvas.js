@@ -1,10 +1,9 @@
-import global from './global';
-
 class Canvas {
-  constructor(zIndex) {
+  constructor(wrapper, zIndex) {
     this.width = 400;
     this.height = 400;
     this.zIndex = zIndex || 'auto';
+    this.wrapper = wrapper;
 
     this.canvas = document.createElement('canvas');
     this.ctx = this.canvas.getContext('2d');
@@ -17,7 +16,7 @@ class Canvas {
     this.canvas.height = this.height;
     this.canvas.style.position = 'absolute';
     this.canvas.style.zIndex = this.zIndex;
-    global.wrapper.append(this.canvas);
+    this.wrapper.append(this.canvas);
   }
 }
 
