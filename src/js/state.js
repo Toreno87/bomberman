@@ -3,15 +3,20 @@ function State() {
     paused: 'paused',
     play: 'play',
   };
-  let state = STATES.paused;
+  let currentState = STATES.paused;
 
-  this.get = () => state;
+  /**
+   * @returns {String} currentState
+   */
+  this.get = () => currentState;
 
-  this.isPaused = () => (state == STATES.paused);
-  this.isPlay = () => (state == STATES.play);
+  this.isPaused = () => (currentState == STATES.paused);
+  this.isPlay = () => (currentState == STATES.play);
 
-  this.setToPlay = () => (state = STATES.play);
-  this.setToPaused = () => (state = STATES.paused);
+  this.setToPlay = () => (currentState = STATES.play);
+  this.setToPaused = () => (currentState = STATES.paused);
 }
 
-export default State;
+let state = new State();
+
+export default state;

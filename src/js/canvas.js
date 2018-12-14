@@ -1,4 +1,8 @@
 class Canvas {
+  /**
+   * @param {Object} wrapper
+   * @param {Number} zIndex
+   */
   constructor(wrapper, zIndex) {
     this.width = 400;
     this.height = 400;

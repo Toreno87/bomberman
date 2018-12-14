@@ -1,12 +1,18 @@
 import time from './time';
 
 class Render {
+  /**
+   * @param {Object} game
+   */
   constructor(game) {
     this.game = game;
     this.time = time;
     window.requestAnimationFrame = this.getRequestAnimationFrame();
   }
 
+  /**
+   * @returns {function} requestAnimationFrame
+   */
   getRequestAnimationFrame() {
     return (
       window.requestAnimationFrame ||
@@ -27,7 +33,7 @@ class Render {
     this.time.timer = (this.time.timeCanvas - this.time.timeStart) / 1000;
 
     if (!this.game.state.isPaused()) {
-      this.time.gameTimer += 1 * this.time.dt;
+      this.time.gameTimer += (1 * this.time.dt);
 
       this.game.logic.refresh();
       this.game.draw.refresh();
