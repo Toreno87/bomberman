@@ -11,7 +11,8 @@ class Game {
     this.settings = settings;
     this.state = state;
     this.level = level;
-    this.currentLevel = this.level.get();
+    this.currentLevelData = this.level.getData();
+    this.currentLevelIndex = this.level.getIndex();
 
     this.gameWrapper = document.getElementById('game_wrapper');
     this.canvasBg = new Canvas(this, 1);
@@ -30,7 +31,8 @@ class Game {
    */
   setLevel(lvl) {
     this.level.set(lvl);
-    this.currentLevel = this.level.get();
+    this.currentLevelData = this.level.getData();
+    this.currentLevelIndex = this.level.getIndex();
   }
 
   play() {

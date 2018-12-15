@@ -6,7 +6,12 @@ function Level() {
   /**
    * @returns {Object} LEVELS[currentLevel]
    */
-  this.get = () => LEVELS[currentLevel];
+  this.getData = () => LEVELS[currentLevel];
+
+  /**
+   * @returns {Number} currentLevel
+   */
+  this.getIndex = () => currentLevel;
 
   /**
    * @param {Number} lvl

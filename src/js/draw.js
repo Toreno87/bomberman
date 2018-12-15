@@ -1,4 +1,5 @@
 import time from './time';
+import image from './image';
 
 class Draw {
   /**
@@ -7,17 +8,11 @@ class Draw {
   constructor(game) {
     this.game = game;
     this.time = time;
+    this.image = image;
 
     this.a = 1;
 
-    this.drawRect(
-      this.game.canvasBg.ctx,
-      0,
-      0,
-      this.game.canvasBg.width,
-      this.game.canvasBg.height,
-      'grey'
-    );
+    this.generateLevel();
   }
 
   /**
@@ -52,6 +47,50 @@ class Draw {
       64,
       'orange'
     );
+  }
+
+  generateLevel() {
+      let grid = this.game.currentLevelData.grid;
+      for (let row = 0; row < grid.length; row++) {
+        let currentRow = grid[row];
+
+        for (var cell = 0; cell < currentRow.length; cell++) {
+          let currentType = currentRow[cell];
+
+          this.drawBrickByType(currentType, row, cell);
+        }
+      }
+
+
+  }
+
+  /**
+   * @param {Number} type
+   */
+  drawBrickByType(type, row, cell) {
+    let context = this.getContextByBrickType(type);
+
+    context.drawImage(
+      this.image.getBySrc(`images/levels/${this.game.currentLevelIndex}/brick_${type}.svg`),
+      cell * this.game.settings.cellSize,
+      row * this.game.settings.cellSize,
+      this.game.settings.cellSize,
+      this.game.settings.cellSize
+    )
+  }
+
+  /**
+   * @param {* Number} type
+   */
+  getContextByBrickType(type) {
+    let brickTypes = this.game.settings.bricks;
+    let context = this.game.canvasBg.ctx;
+
+    if (type == brickTypes.default) {
+      context = this.game.canvasBricks.ctx;
+    }
+
+    return context;
   }
 };
 
