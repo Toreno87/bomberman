@@ -25,17 +25,12 @@ class Game {
     this.init();
   }
 
-  generateLevel() {
-
-  }
-
   /**
    * @param {number} lvl
    */
   setLevel(lvl) {
     this.level.set(lvl);
     this.currentLevel = this.level.get();
-    this.generateLevel();
   }
 
   play() {
