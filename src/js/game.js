@@ -1,3 +1,4 @@
+import settings from './settings';
 import state from './state';
 import level from './level';
 import Canvas from './canvas';
@@ -7,12 +8,16 @@ import Render from './render';
 
 class Game {
   constructor() {
+    this.settings = settings;
     this.state = state;
     this.level = level;
+    this.currentLevel = this.level.get();
 
-    let gameWrapper = document.getElementById('game_wrapper');
-    this.canvasBg = new Canvas(gameWrapper, 1);
-    this.canvas = new Canvas(gameWrapper, 2);
+    this.gameWrapper = document.getElementById('game_wrapper');
+    this.canvasBg = new Canvas(this, 1);
+    this.canvasBricks = new Canvas(this, 2);
+    this.canvas = new Canvas(this, 3);
+
     this.logic = new Logic(this);
     this.draw = new Draw(this);
     this.render = new Render(this);
@@ -20,11 +25,17 @@ class Game {
     this.init();
   }
 
+  generateLevel() {
+
+  }
+
   /**
    * @param {number} lvl
    */
   setLevel(lvl) {
-    this.level.setLvl(lvl);
+    this.level.set(lvl);
+    this.currentLevel = this.level.get();
+    this.generateLevel();
   }
 
   play() {

@@ -1,13 +1,14 @@
 class Canvas {
   /**
-   * @param {Object} wrapper
+   * @param {Object} game
    * @param {Number} zIndex
    */
-  constructor(wrapper, zIndex) {
-    this.width = 400;
-    this.height = 400;
+  constructor(game, zIndex) {
+    this.game = game;
+    this.width = this.game.settings.canvasWidth;
+    this.height = this.game.settings.canvasWidth;
     this.zIndex = zIndex || 'auto';
-    this.wrapper = wrapper;
+    this.wrapper = this.game.gameWrapper;
 
     this.canvas = document.createElement('canvas');
     this.ctx = this.canvas.getContext('2d');
