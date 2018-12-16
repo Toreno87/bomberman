@@ -1,5 +1,5 @@
-import time from './time';
-import image from './image';
+import time from '../time';
+import image from '../libs/image';
 
 class Draw {
   /**

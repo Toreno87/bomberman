@@ -1,10 +1,10 @@
-import settings from './settings';
+import settings from './config/settings';
 import state from './state';
 import level from './level';
-import Canvas from './canvas';
-import Logic from './logic';
-import Draw from './draw';
-import Render from './render';
+import Canvas from './libs/canvas';
+import Logic from './logic/logic';
+import Draw from './draw/draw';
+import Render from './libs/render';
 
 class Game {
   constructor() {
