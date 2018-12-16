@@ -1,5 +1,3 @@
-(function() {
-  const canvas = document.getElementById("game");
-  var game = canvas.getContext("2d");
+import Game from './game';
 
-})();
+let game = new Game();
