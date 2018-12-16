@@ -69,14 +69,17 @@ class Draw {
    */
   drawBrickByType(type, row, cell) {
     let context = this.getContextByBrickType(type);
+    let brickPath = `/images/levels/${this.game.currentLevelIndex}/brick_${type}.svg`;
 
-    context.drawImage(
-      this.image.getBySrc(`images/levels/${this.game.currentLevelIndex}/brick_${type}.svg`),
-      cell * this.game.settings.cellSize,
-      row * this.game.settings.cellSize,
-      this.game.settings.cellSize,
-      this.game.settings.cellSize
-    )
+    this.image.loadBySrc(brickPath).then(() => {
+      context.drawImage(
+        this.image.getBySrc(brickPath),
+        cell * this.game.settings.cellSize,
+        row * this.game.settings.cellSize,
+        this.game.settings.cellSize,
+        this.game.settings.cellSize
+      );
+    });
   }
 
   /**
