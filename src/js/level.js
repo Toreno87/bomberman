@@ -1,4 +1,4 @@
-import LEVELS from './levels';
+import LEVELS from './config/levels';
 
 function Level() {
   let currentLevel = 0;
