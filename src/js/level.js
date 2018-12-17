@@ -17,6 +17,11 @@ function Level() {
    * @param {Number} lvl
    */
   this.set = (lvl) => { currentLevel = lvl };
+
+  /**
+   * @returns {string}
+   */
+  this.getThemePath = () => `images/themes/${this.getData().theme || 'default'}`;
 }
 
 let level = new Level();

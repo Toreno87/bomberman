@@ -57,7 +57,7 @@ class Draw {
    */
   drawBrickByType(type, row, cell) {
     let context = this.getContextByBrickType(type);
-    let brickPath = `/images/themes/default/brick_${type}.svg`;
+    let brickPath = `${this.game.level.getThemePath()}/brick_${type}.svg`;
 
     this.image.loadBySrc(brickPath).then(() => {
       context.drawImage(

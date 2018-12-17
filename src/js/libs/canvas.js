@@ -17,10 +17,15 @@ class Canvas {
   }
 
   create() {
-    this.canvas.width = this.width;
-    this.canvas.height = this.height;
+    let pixelRatio = (window.devicePixelRatio || 1);
+
+    this.canvas.width = this.width * pixelRatio;
+    this.canvas.height = this.height * pixelRatio;
+    this.canvas.style.width = (this.width + 'px');
+    this.canvas.style.height = (this.height + 'px');
     this.canvas.style.position = 'absolute';
     this.canvas.style.zIndex = this.zIndex;
+    this.ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     this.wrapper.append(this.canvas);
   }
 }
