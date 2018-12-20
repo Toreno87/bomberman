@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="38px" viewBox="0 0 30 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="enemies" transform="translate(-52.000000, -55.000000)">
+            <g id="chicken" transform="translate(51.000000, 55.000000)">
+                <g id="enemy">
+                    <ellipse id="Oval" stroke="#979797" fill="#FFFDFD" cx="16" cy="22.5" rx="14" ry="10.5"></ellipse>
+                    <circle id="Oval-2" stroke="#979797" fill="#FFFFFF" cx="16" cy="11" r="8"></circle>
+                    <circle id="Oval-3" stroke="#979797" fill="#FFFFFF" cx="13.5" cy="8.5" r="2.5"></circle>
+                    <circle id="Oval-4" fill="#6D6A6A" cx="12.5" cy="8.5" r="1"></circle>
+                    <circle id="Oval-3-Copy" stroke="#979797" fill="#FFFAFA" cx="21.5" cy="8.5" r="2.5"></circle>
+                    <circle id="Oval-4-Copy" fill="#717070" cx="22.5" cy="8.5" r="1"></circle>
+                    <ellipse id="Oval-5" stroke="#979797" fill="#FFFFFF" cx="4.5" cy="22.5" rx="2.5" ry="6.5"></ellipse>
+                    <ellipse id="Oval-5-Copy" stroke="#979797" fill="#FFFFFF" cx="27.5" cy="22.5" rx="2.5" ry="6.5"></ellipse>
+                    <polygon id="Path" stroke="#D0D0D0" fill="#F0F098" points="17.5 9 20 14 15 14"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="38"></rect>
+                    <polygon id="Triangle" stroke="#979797" fill="#E78787" transform="translate(17.500000, 3.000000) rotate(179.000000) translate(-17.500000, -3.000000) " points="17.5 1 19 5 16 5"></polygon>
+                    <polygon id="Triangle-Copy" stroke="#979797" fill="#E78787" points="16.5 17 18 21 15 21"></polygon>
+                </g>
+                <path d="M14.5,35.5 L13.5,36.5" id="Line-9" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M19.5,35.5 L18.5,36.5" id="Line-9-Copy" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M14.5,33.5 L14.5,37.5" id="Line-10" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M19.5,33.5 L19.5,37.5" id="Line-10-Copy" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M14.5,35.5 L15.5,36.5" id="Line-11" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M19.5,35.5 L20.5,36.5" id="Line-11-Copy" stroke="#979797" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

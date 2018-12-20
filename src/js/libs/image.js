@@ -23,7 +23,7 @@ function ImageController() {
   });
 
   /**
-   * @param {string} src
+   * @param {String} src
    * @returns {Object} image
    */
   this.getBySrc = (src) => {

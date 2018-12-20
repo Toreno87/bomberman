@@ -1,19 +1,23 @@
 class Player {
   /**
-   * @param {Number} cell
-   * @param {Number} row
+   * @param {Number} midX
+   * @param {Number} midY
    */
-  constructor(cell, row) {
-    this.width = 30;
-    this.height = 30;
-    this.midX = 0;
-    this.midY = 0;
-    this.collisionWidth = 20;
-    this.collisionHeight = 20;
+  constructor(midX, midY) {
+    this.width = 34;
+    this.height = 46;
+    this.collisionWidth = 28;
+    this.collisionHeight = 38;
+
+    this.midX = midX;
+    this.midY = midY;
+    this.x = (midX - (this.width / 2));
+    this.y = (midY - (this.height / 2));
+
+    this.imageName = 'player.svg';
 
     this.speed = 1;
     this.bombSize = 1;
-    this.imageSrc = 'images/objects/player.png';
   }
 }
 

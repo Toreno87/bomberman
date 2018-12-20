@@ -13,7 +13,15 @@ const LEVELS = [
       [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1],
       [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     ],
-    theme: 'black',
+    theme: 'default',
+    playerPosition: [2, 1],
+    enemies: {
+      positions: [ [5, 3], [1, 7], [4, 9], [9, 5] ],
+      types: {
+        chicken: 1,
+        turtle: 2,
+      }
+    }
   },
 ];
 
