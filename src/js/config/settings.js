@@ -7,6 +7,14 @@ function Settings() {
     static: 1,
     default: 2,
   };
+
+  this.hotkeys = {
+    up: 'KeyW',
+    down: 'KeyS',
+    left: 'KeyA',
+    right: 'KeyD',
+    bomb: 'Space',
+  }
 }
 
 let settings = new Settings();

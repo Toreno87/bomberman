@@ -1,20 +1,32 @@
 function State() {
   const STATES = {
-    paused: 'paused',
+    pause: 'pause',
     play: 'play',
   };
-  let currentState = STATES.paused;
+  let currentState = STATES.pause;
 
   /**
    * @returns {String} currentState
    */
   this.get = () => currentState;
 
-  this.isPaused = () => (currentState == STATES.paused);
-  this.isPlay = () => (currentState == STATES.play);
+  /**
+   * @returns {Object} STATES
+   */
+  this.getStates = () => STATES;
 
-  this.setToPlay = () => (currentState = STATES.play);
-  this.setToPaused = () => (currentState = STATES.paused);
+  /**
+   * @returns {boolean}
+   */
+  this.isPaused = () => (currentState == STATES.pause);
+
+  /**
+   * @returns {boolean}
+   */
+  this.isPlayed = () => (currentState == STATES.play);
+
+  this.setToPlay = () => { currentState = STATES.play; };
+  this.setToPaused = () => { currentState = STATES.pause; };
 }
 
 let state = new State();

@@ -1,12 +1,10 @@
-import time from '../game/time';
-
 class Render {
   /**
    * @param {Object} game
    */
   constructor(game) {
     this.game = game;
-    this.time = time;
+    this.time = this.game.time;
     window.requestAnimationFrame = this.getRequestAnimationFrame();
   }
 

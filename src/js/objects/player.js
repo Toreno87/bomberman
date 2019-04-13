@@ -16,7 +16,14 @@ class Player {
 
     this.imageName = 'player.svg';
 
-    this.speed = 1;
+    this.move = {
+      up: false,
+      down: false,
+      left: false,
+      right: false,
+    };
+
+    this.speed = 150;
     this.bombSize = 1;
   }
 }

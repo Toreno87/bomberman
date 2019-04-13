@@ -1,4 +1,3 @@
-import time from '../game/time';
 import image from '../libs/image';
 import imagePaths from '../game/image-paths';
 
@@ -8,7 +7,7 @@ class Draw {
    */
   constructor(game) {
     this.game = game;
-    this.time = time;
+    this.time = this.game.time;
     this.image = image;
     this.imagePaths = imagePaths;
     this.objects = this.game.objects;
