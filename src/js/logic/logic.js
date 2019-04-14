@@ -16,12 +16,12 @@ class Logic {
   }
 
   init() {
-    this.playerLogic.add();
+    this.playerLogic.addPlayer();
     this.enemyLogic.addEnemies();
   }
 
   refresh() {
-    this.playerLogic.move();
+    this.playerLogic.movePlayer();
     this.enemyLogic.moveEnemies();
   }
 };

@@ -9,12 +9,12 @@ class PlayerLogic {
     this.objects = this.game.objects;
   }
 
-  add() {
+  addPlayer() {
     let playerMiddleCoordinates = this.utils.getMiddleCoordinates(this.levelData.playerPosition[0], this.levelData.playerPosition[1]);
     this.objects.player = new Player(playerMiddleCoordinates.midX, playerMiddleCoordinates.midY);
   }
 
-  move() {
+  movePlayer() {
     let player = this.objects.player;
     let move = player.move;
     let moveValue = (player.speed * this.time.dt);
