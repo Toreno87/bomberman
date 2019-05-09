@@ -18,6 +18,15 @@ class Enemy {
     this.midY = midY;
     this.x = (midX - (this.width / 2));
     this.y = (midY - (this.height / 2));
+    this.path = {
+      start: {
+        x: midX,
+        y: midY,
+      },
+      end: null,
+      direction: null,
+      prevDirection: null,
+    }
 
     this.imageName = typeData.imageName;
   }
